@@ -35,17 +35,13 @@ li {
 /* header section start  */
 
 .header_section {
-	width: 100%;
-	background-image: url(./img/banner-bg.png);
-	height: auto;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 }
 .navbar {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	height: 30%;
+	justify-content: end;
+	padding-top: 30px;
+
+	/* height: 30%; */
 }
 .navbar-brand {
 	width: 20%;
@@ -56,7 +52,7 @@ li {
 }
 .form-login {
 	display: flex;
-	justify-content: end;
+	justify-content: space-between;
 	align-items: start;
 	padding: 40px 35px 0px 0px;
 	font-size: 18px;
@@ -75,6 +71,7 @@ li {
 }
 .login_icon {
 	display: inline-block;
+	/* padding-top: 5px; */
 }
 .search_icon {
 	display: inline-block;
@@ -82,11 +79,13 @@ li {
 
 @media (max-width: 991px) {
 	.navbar {
-		background-color: white;
-		height: 85%;
 	}
 	.navbar-mobile {
 		z-index: 1;
+		display: block;
+	}
+	.navbar {
+		padding-top: 0px;
 	}
 	.login_icon img {
 		display: none;
@@ -97,19 +96,57 @@ li {
 	.search_icon {
 		display: none;
 	}
+	.custom_menu {
+		display: none;
+	}
+	.social_icon {
+		display: none;
+	}
+	.banner_title {
+		font-size: 48px !important;
+	}
+	.banner_text {
+		font-size: 16px !important;
+	}
+	.right_content {
+		padding-bottom: 50px;
+	}
 }
 
 /* header section end  */
 
+/* banner section left start */
+
+.banner_section_left {
+	width: 20%;
+	background-color: #181818;
+}
+
+/* banner section left end */
+
 /* banner section right start */
+
+.right_content {
+	padding-left: 180px;
+	padding-top: 150px;
+	padding-right: 25px;
+}
+.right_content a {
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #fc3e59;
+	text-align: center;
+	padding: 10px 0px;
+	font-family: octinSportsRg;
+}
 
 .banner-content {
 	display: flex;
-	justify-content: space-between;
+	width: 100%;
 }
 
 .banner_text {
-	padding: 10px 10px 30px 270px;
+	padding: 10px 10px 30px 0px;
 	font-size: 1.1rem;
 }
 
@@ -118,19 +155,24 @@ li {
 	text-transform: uppercase;
 	font-family: octinSportsRg;
 	font-weight: bold;
-	padding: 0px 10px 0px 270px;
+	padding: 0px 10px 0px 0px;
 	margin: 0;
+}
+.banner_section_right {
+	width: 80%;
+	background-image: url(./img/banner-bg.png);
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
 }
 
 .banner_section_right a {
 	width: 100%;
 	font-size: 1.1rem;
 	color: #ffffff;
-	background-color: var(--red);
+
 	text-align: center;
 	padding: 15px 25px;
-	font-family: octinSportsRg;
-	margin-left: 270px;
 }
 
 /* banner section right end */
@@ -170,6 +212,13 @@ li {
 /* banner section end */
 
 /* about section start */
+.about_section_container {
+	display: flex;
+	flex-direction: column;
+}
+.read_bt {
+	align-self: center;
+}
 .about_section {
 	padding-top: 60px;
 	position: relative;
@@ -319,7 +368,7 @@ li {
 		rgba(117, 19, 93, 0.73)
 	);
 	width: 100%;
-	height: 100%;
+	height: 97%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -515,8 +564,10 @@ li {
 	background-color: #2c2c2c;
 	padding-right: 35px;
 	padding-left: 15px;
-	height: 578px;
+	padding-bottom: 10px;
+	/* height: 578px; */
 }
+
 .story_title_main {
 	padding-left: 6em;
 }
@@ -528,7 +579,9 @@ li {
 }
 .story_img {
 	width: 50%;
-	height: auto;
+	background-image: url(./img/story-img.png);
+	/* object-fit: cover; */
+	background-size: cover;
 }
 
 .story_title {
