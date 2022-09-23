@@ -105,3 +105,5 @@ navLisSocial.forEach((n) => {
 	li.innerHTML = `<a href=${n.href}><img src=${n.src}></a> `;
 	ulNavbarSocial.append(li);
 });
+
+///////////
